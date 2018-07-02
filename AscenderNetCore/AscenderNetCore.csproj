@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <AssemblyName>Ascender</AssemblyName>
+    <RootNamespace>Ascender</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETCOREAPP1_1;NETCORE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NETCOREAPP1_1;NETCORE</DefineConstants>
+    <DocumentationFile>bin\Release\netcoreapp1.1\Ascender.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Ascender\INetEventListener.cs" Link="INetEventListener.cs" />
+    <Compile Include="..\Ascender\NatPunchModule.cs" Link="NatPunchModule.cs" />
+    <Compile Include="..\Ascender\NetConstants.cs" Link="NetConstants.cs" />
+    <Compile Include="..\Ascender\NetDebug.cs" Link="NetDebug.cs" />
+    <Compile Include="..\Ascender\NetEndPoint.cs" Link="NetEndPoint.cs" />
+    <Compile Include="..\Ascender\NetManager.cs" Link="NetManager.cs" />
+    <Compile Include="..\Ascender\NetPacket.cs" Link="NetPacket.cs" />
+    <Compile Include="..\Ascender\NetPacketPool.cs" Link="NetPacketPool.cs" />
+    <Compile Include="..\Ascender\NetPeer.cs" Link="NetPeer.cs" />
+    <Compile Include="..\Ascender\NetPeerCollection.cs" Link="NetPeerCollection.cs" />
+    <Compile Include="..\Ascender\NetSocket.cs" Link="NetSocket.cs" />
+    <Compile Include="..\Ascender\NetStatistics.cs" Link="NetStatistics.cs" />
+    <Compile Include="..\Ascender\NetThread.cs" Link="NetThread.cs" />
+    <Compile Include="..\Ascender\NetUtils.cs" Link="NetUtils.cs" />
+    <Compile Include="..\Ascender\ReliableChannel.cs" Link="ReliableChannel.cs" />
+    <Compile Include="..\Ascender\SequencedChannel.cs" Link="SequencedChannel.cs" />
+    <Compile Include="..\Ascender\SimpleChannel.cs" Link="SimpleChannel.cs" />
+    <Compile Include="..\Ascender\Utils\FastBitConverter.cs" Link="Utils\FastBitConverter.cs" />
+    <Compile Include="..\Ascender\Utils\NetDataReader.cs" Link="Utils\NetDataReader.cs" />
+    <Compile Include="..\Ascender\Utils\NetDataWriter.cs" Link="Utils\NetDataWriter.cs" />
+    <Compile Include="..\Ascender\Utils\NetSerializer.cs" Link="Utils\NetSerializer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Utils\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Net.NetworkInformation" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
